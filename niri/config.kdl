@@ -1,4 +1,5 @@
 prefer-no-csd
+
 input {
     keyboard {
            repeat-rate 40
@@ -73,6 +74,7 @@ spawn-sh-at-startup "swaybg -i Pictures/bmw.jpg"
 spawn-at-startup "swayidle"
 
 hotkey-overlay {
+    skip-at-startup
 }
 
 animations {
