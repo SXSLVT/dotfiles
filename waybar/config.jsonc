@@ -85,6 +85,6 @@
     "clock": {
         "format": "  {:%H:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "format-alt": "  {:%A, %B %d, %Y}"
+        "format-alt": "󰸘  {:%A, %B %d, %Y}"
     }
 }
