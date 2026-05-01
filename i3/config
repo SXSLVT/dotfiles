@@ -27,7 +27,7 @@ tiling_drag modifier titlebar
 
 bindsym Mod4+Shift+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
 bindsym Mod4+Return exec st
-bindsym Mod4+b exec librewolf
+bindsym Mod4+b exec firefox
 bindsym Mod4+q kill
 bindsym Mod4+l exec i3lock-fancy -p
 bindsym Mod4+Shift+p exec killall picom
