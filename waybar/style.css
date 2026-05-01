@@ -32,10 +32,13 @@ window#waybar {
 }
 
 #battery {
-    opacity: 0;
-    min-width: 0;
-    padding: 0;
-    margin: 0;
+    background-color: #1e1e2e;
+    color: #ffbb77;
+    border-radius: 20px;
+    padding: 4px 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 8px; /* Added margin so it doesn't touch the memory module */
 }
 
 #workspaces button {
