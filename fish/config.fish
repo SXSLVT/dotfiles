@@ -12,4 +12,4 @@ end
 
 abbr -a !! --position anywhere --function last_history_item
 
-alias ls='eza -l --icons --color=always'
+# alias ls='eza -l --icons --color=always'
