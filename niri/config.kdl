@@ -105,6 +105,14 @@ window-rule {
 }
 
 window-rule {
+    match app-id="chromium"
+    background-effect {
+        blur false
+    }
+    opacity 1.0
+}
+
+window-rule {
     geometry-corner-radius 5
     clip-to-geometry true
 }
