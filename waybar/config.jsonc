@@ -18,8 +18,8 @@
     "modules-right": [
         "tray",
         "network",
-        "pulseaudio",
         "backlight",
+        "pulseaudio",
         "clock"
     ],
 
