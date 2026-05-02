@@ -99,20 +99,29 @@ window-rule {
 }
 
 window-rule {
-    match app-id="librewolf"
-    background-effect {
-        blur false
-    }
-    opacity 1.0
-}
-
-window-rule {
     match app-id="chromium"
     background-effect {
         blur false
     }
     opacity 1.0
 }
+
+layer-rule {
+    match namespace="^launcher$"
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+}
+
+layer-rule {
+    match namespace="^waybar$"
+    opacity 0.9
+    background-effect {
+        blur false
+    }
+}
+
 
 window-rule {
     geometry-corner-radius 5
