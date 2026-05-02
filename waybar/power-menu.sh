@@ -6,7 +6,7 @@ selected=$(echo -e "$entries" | fuzzel --dmenu --width 15 --lines 3 --no-sort --
 
 case $selected in
   Shutdown)
-    systemctl shutdown ;;
+    systemctl poweroff ;;
   Restart)
     systemctl reboot ;;
   Sleep)
