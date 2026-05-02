@@ -119,7 +119,7 @@ static const char *colorname[] = {
         "#ffffff", 
         "#555555", 
         "#000000", 
-        "#ffbb77", 
+        "#e5e5e5", 
 };
 
 #if ALPHA_PATCH && ALPHA_FOCUS_HIGHLIGHT_PATCH
