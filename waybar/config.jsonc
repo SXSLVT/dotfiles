@@ -83,7 +83,7 @@
         "format-icons": {
             "default": ["", "", ""]
         },
-        "scroll-step": 5,
+        "scroll-step": 1,
         "on-click": "pavucontrol"
     },
 
