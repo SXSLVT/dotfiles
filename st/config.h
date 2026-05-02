@@ -99,7 +99,7 @@ static const char *colorname[] = {
         "black",
         "red3",
         "green3",
-        "yellow3",
+        "#ffbb77",
         "blue2",
         "magenta3",
         "cyan3",
@@ -108,7 +108,7 @@ static const char *colorname[] = {
         "gray50",
         "red",
         "green",
-        "yellow",
+        "#ffbb77",
         "#5c5cff",
         "magenta",
         "cyan",
@@ -119,7 +119,7 @@ static const char *colorname[] = {
         "#ffffff", 
         "#555555", 
         "#000000", 
-        "#e5e5e5", 
+        "#ffbb77", 
 };
 
 #if ALPHA_PATCH && ALPHA_FOCUS_HIGHLIGHT_PATCH
