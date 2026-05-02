@@ -14,7 +14,7 @@ window#waybar {
 }
 
 #cpu, #memory, #workspaces, #tray, #network, #pulseaudio, #clock {
-    background-color: #1e1e2e;
+    background-color: #000000;
     border-radius: 20px;
     padding: 4px 16px;
     margin-top: 4px;
@@ -32,7 +32,13 @@ window#waybar {
 }
 
 #battery {
+    background-color: #000000;
     color: #ffbb77;
+    border-radius: 20px;
+    padding: 4px 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 8px;
 }
 
 #workspaces button {
