@@ -1,5 +1,5 @@
 * {
-    font-family: "JetBrainsMono Nerd Font", "Ubuntu Nerd Font", sans-serif;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
     font-size: 14px;
     font-weight: bold;
     border: none;
@@ -13,7 +13,7 @@ window#waybar {
     background-color: transparent;
 }
 
-#cpu, #memory, #workspaces, #tray, #network, #pulseaudio, #backlight, #clock {
+#cpu, #memory, #workspaces, #tray, #network, #pulseaudio, #backlight, #clock, #custom-power {
     background-color: #000000;
     border-radius: 20px;
     padding: 4px 16px;
@@ -79,4 +79,13 @@ window#waybar {
 
 #clock {
     color: #ffbb77;
+}
+
+#custom-power {
+    color: #ffbb77;
+    margin-left: 8px;
+}
+
+#custom-power:hover {
+    color: #eb6f92;
 }
