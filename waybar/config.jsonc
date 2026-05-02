@@ -10,7 +10,7 @@
     "modules-left": [
         "cpu",
         "memory",
-	"battery"
+        "battery"
     ],
     "modules-center": [
         "niri/workspaces"
@@ -19,6 +19,7 @@
         "tray",
         "network",
         "pulseaudio",
+        "backlight",
         "clock"
     ],
 
@@ -46,6 +47,8 @@
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": "󰚥 {capacity}%",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": true,
+        "tooltip-format": "{time} remaining"
     },
 
     "cpu": {
@@ -69,7 +72,7 @@
         "format-wifi": "  {essid}",
         "format-ethernet": "󰈀  Wired",
         "format-disconnected": "󰖪  Offline",
-	"on-click": "st nmtui",
+        "on-click": "st nmtui",
         "interval": 5
     },
 
@@ -81,6 +84,14 @@
         },
         "scroll-step": 5,
         "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        "format": "{icon}  {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip": false
     },
 
     "clock": {
