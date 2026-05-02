@@ -25,12 +25,15 @@
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
+            "1": " ",
+            "2": " ",
+            "3": " ",
             "active": " ",
             "default": " "
         },
-    "on-click": "activate",
-    "padding": 0,
-    "margin": 0
+        "on-click": "activate",
+        "padding": 0,
+        "margin": 0
     },
 
     "battery": {
