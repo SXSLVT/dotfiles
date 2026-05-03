@@ -2,13 +2,13 @@
 
 entries="󰐥 Shutdown\n󰑐 Restart\n󰤄 Sleep"
 
-selected=$(echo -e "$entries" | fuzzel --dmenu --width 15 --lines 3 --no-sort --index)
+selected=$(echo -e "$entries" | wofi --dmenu --width 200 --height 180 --prompt "Power" --cache-file /dev/null)
 
 case $selected in
-  Shutdown)
+  *Shutdown*)
     systemctl poweroff ;;
-  Restart)
+  *Restart*)
     systemctl reboot ;;
-  Sleep)
+  *Sleep*)
     systemctl suspend ;;
 esac
