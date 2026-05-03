@@ -1,0 +1,47 @@
+@import url("file:///home/syner/.cache/wal/colors-waybar.css");
+
+window {
+    background-color: transparent;i
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#outer-box {
+    margin: 2px;
+    border: 2px solid @color6;
+    background-color: @background;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#inner-box {
+    background-color: transparent;
+}
+
+#input {
+    margin: 5px;
+    border: 2px solid @color6;
+    color: @color1;
+    background-color: @background;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+#text {
+    margin: 5px;
+    color: #ffffff;
+}
+
+#entry:selected {
+    background-color: @color2;
+    border-radius: 10px;
+}
+
+#entry:selected #text {
+    color: #000000;
+}
+
+#image {
+    margin-right: 12px;
+}
