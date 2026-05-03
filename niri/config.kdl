@@ -6,7 +6,7 @@ prefer-no-csd
 input {
     keyboard {
            repeat-rate 40
-	   repeat-delay 170
+           repeat-delay 170
         xkb {
         }
         numlock
@@ -110,10 +110,10 @@ window-rule {
 }
 
 layer-rule {
-    match namespace="^launcher$"
+    match namespace="wofi"
     opacity 0.9
     background-effect {
-        blur true
+        blur false
     }
 }
 
@@ -134,10 +134,10 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+F { spawn "pcmanfm"; }
+    Mod+F hotkey-overlay-title="Open the Files app: nautilus" { spawn "nautilus"; }
     Mod+Shift+S { spawn-sh "screenshot-area"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: st" { spawn "st"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--show" "drun"; }
     Super+L hotkey-overlay-title="Lock the Screen: swaylock-fancy" { spawn "swaylock-fancy"; }
     Mod+B hotkey-overlay-title="Open a Browser: LibreWolf" { spawn "librewolf"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
