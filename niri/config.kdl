@@ -121,6 +121,10 @@ animations {
 }
 
 window-rule {
+    default-column-width { proportion 0.51; }
+}
+
+window-rule {
     background-effect {
         blur true
     }
@@ -167,7 +171,7 @@ binds {
     Mod+Shift+S { spawn-sh "screenshot-area"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: st" { spawn "st"; }
     Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--normal-window"; }
-    Super+L hotkey-overlay-title="Lock the Screen: swaylock-fancy" { spawn "swaylock-fancy"; }
+    Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+B hotkey-overlay-title="Open a Browser: LibreWolf" { spawn "librewolf"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 

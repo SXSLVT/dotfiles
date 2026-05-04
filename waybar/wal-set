@@ -13,11 +13,10 @@ awww img "$WALL" --resize fit --transition-type grow
 
 wal -i "$WALL"
 
+pkill waybar && waybar &
+
 c_active=$(sed -n '6p' ~/.cache/wal/colors | tr -d '\n')
 c_inactive=$(sed -n '7p' ~/.cache/wal/colors | tr -d '\n')
 
 sed -i "s/active-color \"[^\"]*\"/active-color \"$c_active\"/" ~/.config/niri/config.kdl
 sed -i "s/inactive-color \"[^\"]*\"/inactive-color \"$c_inactive\"/" ~/.config/niri/config.kdl
-
-pkill waybar && waybar &
-
