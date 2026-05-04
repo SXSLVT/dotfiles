@@ -1,0 +1,8 @@
+width=400
+height=350
+always_parse_args=true
+show=drun
+allow_images=true
+image_size=24
+location=center
+layer=top
