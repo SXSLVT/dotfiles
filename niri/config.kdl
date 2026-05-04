@@ -168,7 +168,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+F hotkey-overlay-title="Open the Files app: nautilus" { spawn "nautilus"; }
-    Mod+Shift+S { spawn-sh "screenshot-area"; }
+    Mod+Shift+S hotkey-overlay-title="Take a screenshot: grim, slurp" { spawn-sh "screenshot-area"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: st" { spawn "st"; }
     Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--normal-window"; }
     Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
