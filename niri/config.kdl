@@ -49,15 +49,15 @@ layout {
 
     focus-ring {
         width 2
-        active-color "#8B736B"
-        inactive-color "#9C8774"
+        active-color "#69755C"
+        inactive-color "#788469"
     }
 
     border {
         off
         width 2
-        active-color "#8B736B"
-        inactive-color "#9C8774"
+        active-color "#69755C"
+        inactive-color "#788469"
         urgent-color "#9b0000"
     }
 
@@ -135,7 +135,7 @@ window-rule {
 
 window-rule {
     match is-active=false
-    opacity 0.88
+    opacity 0.85
 }
 
 layer-rule {
@@ -162,6 +162,7 @@ window-rule {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
+    
     Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "./.config/waybar/power-menu.sh"; }
     Mod+Shift+D hotkey-overlay-title="Open the wallpaper/theme picker" { spawn "./.config/waybar/wallpaper-picker.sh"; }
     Mod+F hotkey-overlay-title="Open the Files app: nautilus" { spawn "nautilus"; }
