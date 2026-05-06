@@ -53,7 +53,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background: @background;
+    color: @color1;
 }
 
 #workspaces button.urgent {
