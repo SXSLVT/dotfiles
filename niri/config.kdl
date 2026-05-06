@@ -49,15 +49,15 @@ layout {
 
     focus-ring {
         width 2
-        active-color "#69755C"
-        inactive-color "#788469"
+        active-color "#8B736B"
+        inactive-color "#9C8774"
     }
 
     border {
         off
         width 2
-        active-color "#69755C"
-        inactive-color "#788469"
+        active-color "#8B736B"
+        inactive-color "#9C8774"
         urgent-color "#9b0000"
     }
 
@@ -125,22 +125,22 @@ window-rule {
         blur true
     }
     draw-border-with-background false
-    opacity 0.85
+    opacity 0.75
 }
 
 window-rule {
     match is-active=true
-    opacity 0.9
+    opacity 0.8
 }
 
 window-rule {
     match is-active=false
-    opacity 0.85
+    opacity 0.75
 }
 
 layer-rule {
     match namespace="wofi"
-    opacity 0.9
+    opacity 0.8
     background-effect {
         blur false
     }
