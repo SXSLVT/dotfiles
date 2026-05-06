@@ -2,14 +2,12 @@
 
 CACHE_FILE="$HOME/.cache/waybar-weather-raw.json"
 UNIT_FILE="$HOME/.cache/weather-unit"
+CITY="Beacon Hills"          # ← CHANGE THIS TO YOUR CITY
 
-# Create default unit if missing
 [ ! -f "$UNIT_FILE" ] && echo "C" > "$UNIT_FILE"
 UNIT=$(cat "$UNIT_FILE")
 
-# Refresh cache only if older than 10 minutes
 if [ ! -f "$CACHE_FILE" ] || [ $(( $(date +%s) - $(stat -c %Y "$CACHE_FILE") )) -gt 600 ]; then
-    CITY=$(curl -s https://ipinfo.io/city 2>/dev/null || echo "Unknown")
     curl -s "https://wttr.in/${CITY// /+}?format=j1" -o "$CACHE_FILE"
 fi
 
@@ -21,7 +19,6 @@ fi
 TEMP_C=$(jq -r '.current_condition[0].temp_C' "$CACHE_FILE")
 FEELS_C=$(jq -r '.current_condition[0].FeelsLikeC' "$CACHE_FILE")
 WEATHER_CODE=$(jq -r '.current_condition[0].weatherCode' "$CACHE_FILE")
-CITY=$(jq -r '.nearest_area[0].areaName[0].value' "$CACHE_FILE" 2>/dev/null || echo "Unknown")
 
 if [ "$UNIT" = "F" ]; then
     TEMP=$(awk "BEGIN {printf \"%.0f\", ($TEMP_C * 9/5 + 32)}")
