@@ -140,7 +140,7 @@ window-rule {
 
 layer-rule {
     match namespace="wofi"
-    opacity 0.8
+    opacity 0.9
     background-effect {
         blur false
     }
