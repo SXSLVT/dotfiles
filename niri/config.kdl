@@ -49,22 +49,22 @@ layout {
 
     focus-ring {
         width 2
-        active-color "#777F87"
-        inactive-color "#9CA1A8"
+        active-color "#69755C"
+        inactive-color "#788469"
     }
 
     border {
         off
         width 2
-        active-color "#777F87"
-        inactive-color "#9CA1A8"
+        active-color "#69755C"
+        inactive-color "#788469"
         urgent-color "#9b0000"
     }
 
     shadow {
-        softness 30
+        softness 2
         spread 5
-        offset x=0 y=5
+        offset x=0 y=20
         color "#0007"
     }
 
@@ -129,13 +129,7 @@ window-rule {
 }
 
 window-rule {
-    match is-active=true
     opacity 0.8
-}
-
-window-rule {
-    match is-active=false
-    opacity 0.75
 }
 
 layer-rule {
