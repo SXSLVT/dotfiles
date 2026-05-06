@@ -15,7 +15,7 @@ window#waybar {
     background-color: transparent;
 }
 
-#cpu, #memory, #workspaces, #tray, #network, #pulseaudio, #backlight, #clock, #custom-power, #custom-wallpaper {
+#cpu, #memory, #workspaces, #tray, #network, #pulseaudio, #backlight, #clock, #custom-power, #custom-wallpaper, #custom-weather {
     background-color: @background;
     border-radius: 20px;
     padding: 4px 16px;
@@ -69,9 +69,17 @@ window#waybar {
     margin-right: 8px;
 }
 
+#network:hover {
+    color: @color1;
+}
+
 #pulseaudio {
     color: @color6; 
     margin-right: 8px;
+}
+
+#pulseaudio:hover {
+    color: @color1; 
 }
 
 #backlight {
@@ -83,13 +91,16 @@ window#waybar {
     color: @color6;
 }
 
+#clock:hover {
+    color: @color1;
+}	
 #custom-power {
     color: @color6;
     margin-left: 8px;
 }
 
 #custom-power:hover {
-    color: #eb6f92;
+    color: @color1;
 }
 
 #custom-wallpaper {
@@ -99,6 +110,14 @@ window#waybar {
 }
 
 #custom-wallpaper:hover {
-    color: #eb6f92;
+    color: @color1;
 }
 
+#custom-weather {
+    color: @color6;
+    margin-right: 8px;
+}
+
+#custom-weather:hover {
+    color: @color1;
+}

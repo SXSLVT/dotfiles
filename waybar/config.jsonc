@@ -21,6 +21,7 @@
 	"network",
         "backlight",
         "pulseaudio",
+	"custom/weather",
         "clock",
 	"custom/power"
     ],
@@ -102,13 +103,23 @@
 
 "custom/power": {
         "format": "󰐥",
-        "on-click": "bash ~/.config/waybar/power-menu.sh",
+        "on-click": "bash ~/.config/waybar/scripts/power-menu.sh",
         "tooltip": false
     },
 
 "custom/wallpaper": {
     "format": " 󰉼 ",
-    "on-click": "~/.config/waybar/wallpaper-picker.sh",
+    "on-click": "~/.config/waybar/scripts/wallpaper-picker.sh",
     "escape": true
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/weather.sh",
+	"on-click": "xdg-open 'https://wttr.in/?0QT'",
+        "tooltip": true,
+        "interval": 600
     }
 }
+
