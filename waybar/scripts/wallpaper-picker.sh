@@ -9,7 +9,7 @@ done | \
 wofi --dmenu \
      --prompt "Select Wallpaper..." \
      --width 500 \
-     --height 230 \
+     --height 280 \
      --cache-file /dev/null \
      --normal-window \
      --insensitive \
