@@ -12,3 +12,7 @@ layout {{
         active-color "{color6}"
     }}
 }}
+
+overview {{
+    backdrop-color "{color0}b3" 
+}}
