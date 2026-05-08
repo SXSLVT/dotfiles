@@ -47,23 +47,22 @@ layout {
 
     default-column-width { proportion 0.5; }
 
-    focus-ring {
+    border {
+        on
         width 2
         active-color "#9795A2"
-        inactive-color "#CAB3B5"
+        inactive-color "#5C5A66"
+        urgent-color "#9b0000"
     }
 
-    border {
-        off
-        width 2
-        active-color "#9795A2"
-        inactive-color "#CAB3B5"
-        urgent-color "#9b0000"
+    focus-ring {
+        on
+	    width 0
+        active-color "#C8A2C8" 
     }
 
 shadow {
         on
-
         softness 25  
         spread 8        
         offset x=0 y=6 
