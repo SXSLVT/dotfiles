@@ -49,23 +49,28 @@ layout {
 
     focus-ring {
         width 2
-        active-color "#69755C"
-        inactive-color "#788469"
+        active-color "#9795A2"
+        inactive-color "#CAB3B5"
     }
 
     border {
         off
         width 2
-        active-color "#69755C"
-        inactive-color "#788469"
+        active-color "#9795A2"
+        inactive-color "#CAB3B5"
         urgent-color "#9b0000"
     }
 
-    shadow {
-        softness 2
-        spread 5
-        offset x=0 y=20
-        color "#0007"
+shadow {
+        on
+
+        softness 45  
+        spread 8        
+        offset x=0 y=8 
+
+        color "#00000080"     
+        inactive-color "#00000050"
+
     }
 
     struts {
@@ -81,42 +86,32 @@ hotkey-overlay {
 }
 
 animations {
+    slowdown 1.2
+
+    workspace-switch {
+        spring damping-ratio=0.82 stiffness=650 epsilon=0.0001
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=0.85 stiffness=680 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=0.80 stiffness=750 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=0.82 stiffness=750 epsilon=0.0001
+    }
+
     window-open {
-        duration-ms 450
-        curve "ease-out-expo" 
-        
-        custom-shader r"
-            vec4 open_window(vec3 coords_geo, vec3 size_geo) {
-                float progress = niri_clamped_progress;
-                
-                float offset = (1.0 - progress) * 0.4;
-                
-                float stretch = 1.0 + (1.0 - progress) * 0.1;
-                vec2 uv = vec2((coords_geo.x - offset) / stretch, coords_geo.y);
-
-                if (uv.x < 0.0 || uv.x > 1.0) return vec4(0.0);
-
-                return niri_sample_window(uv) * progress;
-            }
-        "
+        duration-ms 260
+        curve "cubic-bezier" 0.23 1.0 0.32 1.0 
     }
 
     window-close {
-        duration-ms 400
-        curve "ease-out-cubic"
-        
-        custom-shader r"
-            vec4 close_window(vec3 coords_geo, vec3 size_geo) {
-                float progress = niri_clamped_progress;
-                
-                float offset = progress * 0.4;
-                vec2 uv = vec2(coords_geo.x - offset, coords_geo.y);
-
-                if (uv.x < 0.0 || uv.x > 1.0) return vec4(0.0);
-
-                return niri_sample_window(uv) * (1.0 - progress);
-            }
-        "
+        duration-ms 210
+        curve "cubic-bezier" 0.6 0.0 0.8 0.0 
     }
 }
 
@@ -150,7 +145,7 @@ layer-rule {
 
 
 window-rule {
-    geometry-corner-radius 5
+    geometry-corner-radius 1
     clip-to-geometry true
 }
 
