@@ -13,7 +13,7 @@ awww img "$WALL" --resize fit --transition-type grow --transition-fps 60
 
 wal -i "$WALL"
 
-pkill waybar && waybar &
+killall -SIGUSR2 waybar || waybar
 
 c_active=$(sed -n '6p' ~/.cache/wal/colors | tr -d '\n')
 c_inactive=$(sed -n '7p' ~/.cache/wal/colors | tr -d '\n')
