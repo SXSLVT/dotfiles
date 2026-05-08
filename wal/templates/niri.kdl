@@ -2,7 +2,6 @@ layout {{
     focus-ring {{
         width 2
         active-color "{color6}"
-        inactive-color "{color8}"
     }}
 
     border {{
@@ -10,6 +9,5 @@ layout {{
         width 2
         active-color "{color6}"
         inactive-color "{color8}"
-        urgent-color "{color9}"
     }}
 }}
