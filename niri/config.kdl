@@ -64,13 +64,11 @@ layout {
 shadow {
         on
 
-        softness 45  
+        softness 25  
         spread 8        
-        offset x=0 y=8 
+        offset x=0 y=6 
 
         color "#00000080"     
-        inactive-color "#00000050"
-
     }
 
     struts {
@@ -86,32 +84,11 @@ hotkey-overlay {
 }
 
 animations {
-    slowdown 1.2
-
-    workspace-switch {
-        spring damping-ratio=0.82 stiffness=650 epsilon=0.0001
-    }
-
-    horizontal-view-movement {
-        spring damping-ratio=0.85 stiffness=680 epsilon=0.0001
-    }
-
-    window-movement {
-        spring damping-ratio=0.80 stiffness=750 epsilon=0.0001
-    }
-
-    window-resize {
-        spring damping-ratio=0.82 stiffness=750 epsilon=0.0001
-    }
+    slowdown 1.5
 
     window-open {
         duration-ms 260
         curve "cubic-bezier" 0.23 1.0 0.32 1.0 
-    }
-
-    window-close {
-        duration-ms 150
-        curve "cubic-bezier" 0.6 0.0 0.8 0.0 
     }
 }
 
@@ -145,7 +122,7 @@ layer-rule {
 
 
 window-rule {
-    geometry-corner-radius 1
+    geometry-corner-radius 2
     clip-to-geometry true
 }
 
