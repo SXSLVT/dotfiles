@@ -1,3 +1,5 @@
+include "~/.cache/wal/niri.kdl"
+
 workspace "1"
 workspace "2"
 
@@ -36,7 +38,7 @@ input {
 }
 
 layout {
-    gaps 12
+    gaps 10
     center-focused-column "never"
 
     preset-column-widths {
@@ -47,18 +49,10 @@ layout {
 
     default-column-width { proportion 0.5; }
 
-    border {
-        on
-        width 2
-        active-color "#9795A2"
-        inactive-color "#5C5A66"
-        urgent-color "#9b0000"
+    /-border {
     }
 
-    focus-ring {
-        on
-	    width 0
-        active-color "#C8A2C8" 
+    /-focus-ring {
     }
 
 shadow {
