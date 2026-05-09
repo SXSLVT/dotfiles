@@ -40,14 +40,13 @@ input {
 layout {
     gaps 12
     center-focused-column "never"
-
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-    }
+}
 
-    default-column-width { proportion 0.5; }
+default-column-width { proportion 0.5; }
 
     /-border {
     }
@@ -68,9 +67,10 @@ shadow {
     }
 }
 
-spawn-at-startup "waybar"
-spawn-at-startup "awww-daemon"
-spawn-at-startup "swayidle"
+/-spawn-at-startup "waybar"
+spawn-at-startup "qs -c 'noctalia-shell'"
+/-spawn-at-startup "awww-daemon"
+/-spawn-at-startup "swayidle"
 
 hotkey-overlay {
     skip-at-startup
@@ -105,14 +105,13 @@ layer-rule {
     }
 }
 
-layer-rule {
-    match namespace="^waybar$"
+/-layer-rule {
+    match namespace="waybar"
     opacity 0.9
     background-effect {
         blur false
     }
 }
-
 
 window-rule {
     geometry-corner-radius 2
@@ -122,13 +121,18 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     
-    Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "./.config/waybar/scripts/power-menu.sh"; }
-    Mod+Shift+D hotkey-overlay-title="Open the wallpaper/theme picker" { spawn "./.config/waybar/scripts/wallpaper-picker.sh"; }
+//    Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "./.config/waybar/scripts/power-menu.sh"; }
+    Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+
+//    Mod+Shift+D hotkey-overlay-title="Open the wallpaper/theme picker" { spawn "./.config/waybar/scripts/wallpaper-picker.sh"; }
+    Mod+Shift+D hotkey-overlay-title="Open the wallpaper/theme picker" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
     Mod+F hotkey-overlay-title="Open the Files app: nautilus" { spawn "nautilus"; }
     Mod+Shift+S hotkey-overlay-title="Take a screenshot: grim, slurp" { spawn-sh "screenshot-area"; }
-    Mod+Return hotkey-overlay-title="Open a Terminal: st" { spawn "st"; }
-    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--normal-window"; }
-    Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
+//    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--normal-window"; }
+    Mod+D hotkey-overlay-title="Open the Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+//    Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    Super+L hotkey-overlay-title="Lock the Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
     Mod+B hotkey-overlay-title="Open a Browser: LibreWolf" { spawn "librewolf"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -274,3 +278,8 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 }
+
+include "~/.config/niri/noctalia.kdl"
+
+include "./noctalia.kdl"
+
