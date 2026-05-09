@@ -75,7 +75,7 @@
         "format-wifi": "  {essid}",
         "format-ethernet": "󰈀  Wired",
         "format-disconnected": "󰖪  Offline",
-        "on-click": "st nmtui",
+        "on-click": "foot nmtui",
         "interval": 5
     },
 
