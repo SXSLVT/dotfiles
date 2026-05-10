@@ -1,11 +1,11 @@
 layout {
     focus-ring {
-        active-color "#a8c8ff"
+        active-color "{{colors.primary.default.hex}}"
         inactive-color "transparent"
     }
 
     border {
-        active-color "#a8c8ff"
+        active-color "{{colors.primary.default.hex}}"
         inactive-color "transparent"
     }
 }

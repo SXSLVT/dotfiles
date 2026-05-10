@@ -48,12 +48,6 @@ layout {
 
 default-column-width { proportion 0.5; }
 
-    /-border {
-    }
-
-    /-focus-ring {
-    }
-
 shadow {
         on
         softness 25  

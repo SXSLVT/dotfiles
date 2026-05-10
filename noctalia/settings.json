@@ -166,21 +166,11 @@
                     ],
                     "chevronColor": "none",
                     "colorizeIcons": false,
-                    "drawerEnabled": true,
+                    "drawerEnabled": false,
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
                     ]
-                },
-                {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
                 },
                 {
                     "iconColor": "none",
@@ -660,7 +650,7 @@
                 "id": "kitty"
             }
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,
@@ -689,7 +679,7 @@
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],
-        "overviewBlur": 0.4,
+        "overviewBlur": 0.6,
         "overviewEnabled": true,
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
