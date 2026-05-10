@@ -53,7 +53,7 @@
         "fontScale": 0.95,
         "frameRadius": 12,
         "frameThickness": 8,
-        "hideOnOverview": true,
+        "hideOnOverview": false,
         "marginHorizontal": 4,
         "marginVertical": 4,
         "middleClickAction": "none",
