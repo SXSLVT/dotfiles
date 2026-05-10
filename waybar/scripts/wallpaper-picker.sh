@@ -13,9 +13,7 @@ wofi --dmenu \
      --cache-file /dev/null \
      --normal-window \
      --insensitive \
-     --allow-images \
-     --image-size 150)
-
+     --allow-images) 
 if [ -n "$selected" ]; then
     img_path=$(echo "$selected" | sed 's/^img://;s/:text:.*$//')
     cp "$img_path" "$HOME/.cache/current_wallpaper.png"
