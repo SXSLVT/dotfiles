@@ -9,7 +9,7 @@ fi
 
 echo "Setting wallpaper: $WALL"
 
-awww img "$WALL" --resize fit --transition-type grow --transition-fps 60
+awww img "$WALL" --resize crop --transition-type grow --transition-fps 60
 
 wal -i "$WALL"
 
