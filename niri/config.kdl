@@ -44,11 +44,27 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-}
+    }
 
-default-column-width { proportion 0.5; }
+    default-column-width { 
+        proportion 0.5; 
+    }
 
-shadow {
+    focus-ring {
+        width 2
+        active-color "#8B736B"
+        inactive-color "#9C8774"
+    }
+
+    border {
+        off
+        width 2
+        active-color "#8B736B"
+        inactive-color "#9C8774"
+        urgent-color "#9b0000"
+    }
+
+    shadow {
         on
         softness 25  
         spread 8        
@@ -61,8 +77,8 @@ shadow {
     }
 }
 
-/-spawn-at-startup "waybar"
 spawn-at-startup "QT_QPA_PLATFORMTHEME=qt6ct" "qs" "-c" "noctalia-shell"
+/-spawn-at-startup "waybar"
 /-spawn-at-startup "awww-daemon"
 /-spawn-at-startup "swayidle"
 
@@ -99,7 +115,7 @@ layer-rule {
     }
 }
 
-/-layer-rule {
+layer-rule {
     match namespace="waybar"
     opacity 0.9
     background-effect {
@@ -113,8 +129,7 @@ window-rule {
 }
 
 binds {
-    Mod+Shift+Slash { show-hotkey-overlay; }
-    
+    Mod+Shift+Slash { show-hotkey-overlay; }  
 //    Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "./.config/waybar/scripts/power-menu.sh"; }
     Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
 
