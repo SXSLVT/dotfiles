@@ -1,4 +1,7 @@
-include "~/.cache/wal/niri.kdl"
+// This config is built around **Noctalia** (your custom shell/launcher/bar).
+// Noctalia includes its own bar, launcher, power menu, wallpaper picker, lockscreen, etc.
+//
+// If you prefer to use **Waybar** instead, follow the instructions below.
 
 workspace "1"
 workspace "2"
@@ -53,14 +56,14 @@ layout {
     focus-ring {
         width 2
         active-color "#8B736B"
-        inactive-color "#9C8774"
+        inactive-color "#505050"
     }
 
     border {
         off
         width 2
         active-color "#8B736B"
-        inactive-color "#9C8774"
+        inactive-color "#505050"
         urgent-color "#9b0000"
     }
 
@@ -77,10 +80,13 @@ layout {
     }
 }
 
+// Noctalia (default)
 spawn-at-startup "QT_QPA_PLATFORMTHEME=qt6ct" "qs" "-c" "noctalia-shell"
-/-spawn-at-startup "waybar"
-/-spawn-at-startup "awww-daemon"
-/-spawn-at-startup "swayidle"
+
+// Waybar users - uncomment these and comment the noctalia line above 
+// spawn-at-startup "waybar"
+// spawn-at-startup "awww-daemon"
+// spawn-at-startup "swayidle"
 
 hotkey-overlay {
     skip-at-startup
@@ -130,22 +136,26 @@ window-rule {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }  
-//    Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "./.config/waybar/scripts/power-menu.sh"; }
-    Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
 
-//    Mod+Shift+D hotkey-overlay-title="Open the wallpaper/theme picker" { spawn "./.config/waybar/scripts/wallpaper-picker.sh"; }
+// Noctalia menus (default) 
+    Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     Mod+Shift+D hotkey-overlay-title="Open the wallpaper/theme picker" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
+    Mod+D hotkey-overlay-title="Open the Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Super+L hotkey-overlay-title="Lock the Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+
+// Waybar users - uncomment these instead and comment the noctalia ones including kitty above (st is recommended instead of kitty)
+    // Mod+Ctrl+D hotkey-overlay-title="Open the Power menu" { spawn "./.config/waybar/scripts/power-menu.sh"; }
+    // Mod+Shift+D hotkey-overlay-title="Open the wallpaper/theme picker" { spawn "./.config/waybar/scripts/wallpaper-picker.sh"; }
+    // Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--normal-window"; }
+    // Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    // Mod+Return hotkey-overlay-title="Open a Terminal: st" { spawn "st"; }
+
     Mod+F hotkey-overlay-title="Open the Files app: nautilus" { spawn "nautilus"; }
     Mod+Shift+S hotkey-overlay-title="Take a screenshot: grim, slurp" { spawn-sh "screenshot-area"; }
-//    Mod+Return hotkey-overlay-title="Open a Terminal: st" { spawn "st"; }
-    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-//    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--normal-window"; }
-    Mod+D hotkey-overlay-title="Open the Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-//    Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
-    Super+L hotkey-overlay-title="Lock the Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
     Mod+B hotkey-overlay-title="Open a Browser: LibreWolf" { spawn "librewolf"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
-
+   
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
@@ -289,7 +299,13 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
+// Noctalia specific includes (default)
 include "~/.config/niri/noctalia.kdl"
-
 include "./noctalia.kdl"
 
+// Pywal specific include (delete Noctalia specifice ones and uncomment the pywal one below for waybar users)
+// include "~/.cache/wal/niri.kdl"
+
+// Waybar users, you must do these 2 steps for full functionality:
+// 1. Delete or rename ~/.config/starship.toml
+// 2. Delete or rename ~/.config/niri/noctalia.kdl
