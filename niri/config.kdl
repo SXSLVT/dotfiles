@@ -303,7 +303,7 @@ binds {
 include "~/.config/niri/noctalia.kdl"
 include "./noctalia.kdl"
 
-// Pywal specific include (delete Noctalia specific ones and uncomment the pywal one below for waybar users)
+// Pywal specific include (comment Noctalia specific ones and uncomment the pywal one below for waybar users)
 // include "~/.cache/wal/niri.kdl"
 
 // Waybar users, if you use starship, you must delete or rename ~/.config/starship.toml (if it exists)
