@@ -81,7 +81,7 @@ layout {
 }
 
 // Noctalia (default)
-spawn-at-startup "QT_QPA_PLATFORMTHEME=qt6ct" "qs" "-c" "noctalia-shell"
+spawn-at-startup "env" "QT_QPA_PLATFORMTHEME=qt6ct" "qs" "-c" "noctalia-shell"
 
 // Waybar users - uncomment these and comment the noctalia line above 
 // spawn-at-startup "waybar"
@@ -302,8 +302,9 @@ binds {
 // Noctalia specific includes (default)
 include "~/.config/niri/noctalia.kdl"
 include "./noctalia.kdl"
+
 // Pywal specific include (delete Noctalia specifice ones and uncomment the pywal one below for waybar users)
 // include "~/.cache/wal/niri.kdl"
-//
+
 // Waybar users, if you use starship, you must delete or rename ~/.config/starship.toml (if it exists)
 // Restart niri after changes made
