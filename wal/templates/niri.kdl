@@ -1,0 +1,18 @@
+layout {{
+    border {{
+	on
+	width 2
+        active-color "{color6}"
+        inactive-color "#5c5a66" 
+        urgent-color "#9b0000"
+    }}
+
+    focus-ring {{
+        width 0
+        active-color "{color6}"
+    }}
+}}
+
+overview {{
+    backdrop-color "{color0}b3" 
+}}

@@ -1,0 +1,111 @@
+@import url("file:///home/syner/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window#waybar {
+    background-color: rgba(12, 12, 18, 0.92);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0 6px;    
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+    padding: 2px 4px;
+}
+
+#cpu, #memory, #battery, #network, #pulseaudio, #backlight,
+#clock, #custom-power, #custom-wallpaper, #custom-weather, #tray {
+    background: rgba(30, 30, 42, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px; 
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+    padding: 1px 10px;
+    color: @color6;
+    margin: 2px 2px;
+}
+
+#tray {
+    padding: 1px 6px;
+}
+
+#custom-power {
+    color: rgba(220, 80, 80, 1);
+    border-color: rgba(220, 80, 80, 0.2);
+    background: rgba(220, 80, 80, 0.1);
+}
+
+#custom-power:hover {
+    color: rgba(255, 110, 110, 1);
+    background: rgba(220, 80, 80, 0.22);
+    box-shadow: inset 0 0 8px rgba(220, 80, 80, 0.3);
+}
+
+#cpu:hover, #memory:hover, #network:hover, #pulseaudio:hover,
+#backlight:hover, #clock:hover, #custom-wallpaper:hover,
+#custom-weather:hover, #battery:hover {
+    color: @color1;
+    background: rgba(45, 45, 62, 0.95);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.07);
+}
+
+#clock {
+    font-feature-settings: "tnum";
+}
+
+#workspaces {
+    background: rgba(30, 30, 42, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+    padding: 1px 3px;
+    margin: 2px 2px;
+}
+
+#workspaces button {
+    border-radius: 7px;
+    padding: 1px 8px;
+    min-width: 18px;
+    background: transparent;
+    color: @color6;
+    font-size: 11px;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: @color1;
+    padding: 1px 10px;
+}
+
+#workspaces button.active {
+    background: rgba(150, 120, 255, 0.15);
+    color: rgba(150, 120, 255, 1);
+    padding: 1px 10px;
+    min-width: 22px;
+    box-shadow: inset 0 0 6px rgba(150, 120, 255, 0.2);
+}
+
+#workspaces button.focused {
+    background: rgba(150, 120, 255, 0.15);
+    color: rgba(150, 120, 255, 1);
+    padding: 1px 10px;
+    min-width: 22px;
+    box-shadow: inset 0 0 6px rgba(150, 120, 255, 0.2);
+}
+
+#workspaces button.occupied:not(.active):not(.focused) {
+    color: @color4;
+}
