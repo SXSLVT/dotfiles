@@ -1,7 +1,7 @@
 // This config is built around Noctalia (your custom shell/launcher/bar).
 // Noctalia includes its own bar, launcher, power menu, wallpaper picker, lockscreen, etc.
 //
-// If you prefer to use Waybar instead, follow the instructions below.
+// If you prefer to use Waybar and separate launcher etc. instead, follow the instructions below.
 
 workspace "1"
 workspace "2"
