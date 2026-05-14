@@ -37,11 +37,12 @@ window#waybar {
     background-color: @background;
     color: @color6;
     border-radius: 20px;
-    padding: 4px 4px;
+    padding: 4px 16px;
     margin-top: 4px;
     margin-bottom: 4px;
     margin-left: 8px;
 }
+
 
 #workspaces button {
     color: @color5; 
