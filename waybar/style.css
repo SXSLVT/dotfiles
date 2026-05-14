@@ -46,6 +46,7 @@ window#waybar {
 
 #workspaces button {
     color: @color5; 
+    padding: 4px 4px;
 }
 
 #workspaces button.active {
