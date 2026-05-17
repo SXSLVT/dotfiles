@@ -364,7 +364,7 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/syner/Documents/pfp.jpg",
+        "avatarImage": "/home/syner/Pictures/pfp.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -662,10 +662,6 @@
             {
                 "enabled": true,
                 "id": "zenBrowser"
-            },
-            {
-                "enabled": true,
-                "id": "hyprland"
             }
         ],
         "enableUserTheming": false
