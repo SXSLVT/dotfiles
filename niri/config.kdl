@@ -80,7 +80,7 @@ layout {
 }
 
 // Noctalia (default)
-spawn-at-startup "env" "QT_QPA_PLATFORMTHEME=qt6ct" "qs" "-c" "noctalia-shell"
+spawn-at-startup "env" "QT_QPA_PLATFORMTHEME=gtk3" "qs" "-c" "noctalia-shell"
 // Waybar users - uncomment these and comment the noctalia line above 
 // spawn-at-startup "waybar"
 // spawn-at-startup "awww-daemon"
