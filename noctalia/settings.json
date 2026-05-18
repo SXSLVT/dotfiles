@@ -33,7 +33,7 @@
         "preferredPlayer": "",
         "spectrumFrameRate": 60,
         "spectrumMirrored": true,
-        "visualizerType": "linear",
+        "visualizerType": "wave",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
         "volumeOverdrive": false,
@@ -145,6 +145,12 @@
                 }
             ],
             "right": [
+                {
+                    "colorName": "primary",
+                    "hideWhenIdle": false,
+                    "id": "AudioVisualizer",
+                    "width": 100
+                },
                 {
                     "compactMode": false,
                     "hideMode": "hidden",
@@ -535,7 +541,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "notifyUpdates": true
     },
     "sessionMenu": {
