@@ -8,6 +8,11 @@ workspace "2"
 
 prefer-no-csd
 
+cursor {
+        xcursor-theme "Bibata-Modern-Classic" 
+        xcursor-size 20 
+}
+
 input {
     keyboard {
            repeat-rate 40
