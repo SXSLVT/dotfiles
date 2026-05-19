@@ -66,7 +66,7 @@
         "outerCorners": true,
         "position": "top",
         "reverseScroll": false,
-        "rightClickAction": "settings",
+        "rightClickAction": "controlCenter",
         "rightClickCommand": "",
         "rightClickFollowMouse": true,
         "screenOverrides": [
@@ -266,20 +266,8 @@
     "controlCenter": {
         "cards": [
             {
-                "enabled": true,
-                "id": "profile-card"
-            },
-            {
-                "enabled": true,
-                "id": "shortcuts-card"
-            },
-            {
-                "enabled": true,
-                "id": "audio-card"
-            },
-            {
                 "enabled": false,
-                "id": "brightness-card"
+                "id": "media-sysmon-card"
             },
             {
                 "enabled": true,
@@ -287,7 +275,19 @@
             },
             {
                 "enabled": true,
-                "id": "media-sysmon-card"
+                "id": "profile-card"
+            },
+            {
+                "enabled": false,
+                "id": "shortcuts-card"
+            },
+            {
+                "enabled": false,
+                "id": "audio-card"
+            },
+            {
+                "enabled": false,
+                "id": "brightness-card"
             }
         ],
         "diskPath": "/",
