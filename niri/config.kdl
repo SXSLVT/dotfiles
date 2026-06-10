@@ -302,11 +302,8 @@ binds {
 }
 
 
-// Noctalia specific includes (default)
-include "~/.config/niri/noctalia.kdl"
-include "./noctalia.kdl"
-
-// Pywal specific include (comment Noctalia specific ones and uncomment the pywal one below for waybar users)
+// Noctalia will auto generate the includes
+// Pywal specific include (comment Noctalia specific ones and uncomment the pywal one for waybar users)
 // include "~/.cache/wal/niri.kdl"
 // Waybar users, if you use starship, you must delete or rename the noctalia line in ~/.config/starship.toml (if it exists)
 // Restart niri after changes made!
