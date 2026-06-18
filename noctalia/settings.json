@@ -43,18 +43,18 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 0.93,
-        "barType": "simple",
+        "barType": "floating",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
-        "contentPadding": 5,
+        "contentPadding": 0,
         "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
-        "fontScale": 0.95,
+        "fontScale": 1,
         "frameRadius": 12,
         "frameThickness": 8,
         "hideOnOverview": false,
-        "marginHorizontal": 4,
+        "marginHorizontal": 200,
         "marginVertical": 4,
         "middleClickAction": "none",
         "middleClickCommand": "",
@@ -75,7 +75,7 @@
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": false,
-        "widgetSpacing": 5,
+        "widgetSpacing": 4,
         "widgets": {
             "center": [
                 {
@@ -101,6 +101,16 @@
                 }
             ],
             "left": [
+                {
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "customIconPath": "/home/syner/Downloads/nixos_logo_icon_170910-953141139.png",
+                    "enableColorization": false,
+                    "icon": "rocket",
+                    "iconColor": "none",
+                    "id": "Launcher",
+                    "useDistroLogo": false
+                },
                 {
                     "compactMode": false,
                     "diskPath": "/",
@@ -179,16 +189,6 @@
                     ]
                 },
                 {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
-                },
-                {
                     "iconColor": "none",
                     "id": "WallpaperSelector"
                 },
@@ -216,7 +216,7 @@
                 {
                     "clockColor": "none",
                     "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatHorizontal": "HH:mm ddd, MMM dd yyyy",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
@@ -266,7 +266,7 @@
     "controlCenter": {
         "cards": [
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "media-sysmon-card"
             },
             {
@@ -617,7 +617,7 @@
         "batteryWarningThreshold": 15,
         "cpuCriticalThreshold": 90,
         "cpuWarningThreshold": 80,
-        "criticalColor": "",
+        "criticalColor": "#ffb4ab",
         "diskAvailCriticalThreshold": 10,
         "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
@@ -633,7 +633,7 @@
         "tempCriticalThreshold": 90,
         "tempWarningThreshold": 80,
         "useCustomColors": false,
-        "warningColor": ""
+        "warningColor": "#c9cc62"
     },
     "templates": {
         "activeTemplates": [
@@ -668,6 +668,10 @@
             {
                 "enabled": true,
                 "id": "zenBrowser"
+            },
+            {
+                "enabled": true,
+                "id": "foot"
             }
         ],
         "enableUserTheming": false
